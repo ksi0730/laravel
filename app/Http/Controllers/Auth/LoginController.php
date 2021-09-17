@@ -83,7 +83,7 @@ class LoginController extends Controller
          }
          Log::info('Twitterから取得しました。', ['user' => $twitterUser]);
          Auth::login($user);
-         return redirect('/team');
+         return redirect('/');
 
 
     }

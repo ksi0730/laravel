@@ -63,7 +63,8 @@
                         <div class="form-group row">
                           <div class="col-md-6 offset-md-4">
                             <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="politician" value="1" {{ old('politician') == '1' ? 'checked' : '' }}>
+                                    <input class="form-check-input" type="hidden" name="politician" value="0" {{ old('politician') ? 'checked' : '' }}>
+                                    <input class="form-check-input" type="checkbox" name="politician" value="1" {{ old('politician') ? 'checked' : '' }}>
 
                                     <label class="form-check-label" for="politician">
                                         {{ __('Register as a Politician') }}

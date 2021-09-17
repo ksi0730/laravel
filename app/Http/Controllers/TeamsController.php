@@ -15,8 +15,10 @@ class TeamsController extends Controller
     {
         //チーム 全件取得
         $teams = Team::get();
+        $teams1 = Team::where('id', 1);
         return view('teams',[
             'teams'=> $teams,
+            'teams1'=> $teams1,
             ]);
         
     }
@@ -31,7 +33,7 @@ class TeamsController extends Controller
         
         //バリデーション:エラー
         if ($validator->fails()) {
-            return redirect('/team')
+            return redirect('/')
                 ->withInput()
                 ->withErrors($validator);
         }
@@ -45,7 +47,7 @@ class TeamsController extends Controller
         
         //多対多のリレーションもここで登録
         $teams->members()->attach( Auth::user() );
-        return redirect('/team');
+        return redirect('/');
         
     }
  

@@ -20,7 +20,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/team', 'TeamsController@index');
+Route::get('/', 'TeamsController@index');
 Route::get('/enquete', 'EnquetesController@index');
 Route::get('/question', 'QuestionsController@index');
 Route::get('comment/{team_id}', 'CommentsController@index');

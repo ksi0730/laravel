@@ -64,6 +64,7 @@ section {
   display: block;
 }
 
+
 body {
   margin: 0;
   font-family: "Nunito", sans-serif;
@@ -7085,6 +7086,10 @@ button.bg-dark:focus {
 
 .bg-white {
   background-color: #fff !important;
+}
+
+.bg-black {
+  background-color: #000000 !important;
 }
 
 .bg-transparent {

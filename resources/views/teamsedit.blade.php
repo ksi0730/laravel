@@ -6,18 +6,23 @@
         <form action="{{ url('teams/update') }}" method="POST">
             <!-- item_name -->
             <div class="form-group">
-                <label for="item_name">Team name</label>
+                <div class="my-3 mx-auto col-sm-6">
+                <label for="item_name">Voice</label>
                 <input type="text" name="team_name" class="form-control" value="{{$team->team_name}}">
+                </div>
             </div>
             <div class="form-group">
-                <label for="item_name">Team detail</label>
-                <input type="text" name="team_detail" class="form-control" value="{{$team->team_detail}}">
+                <div class="my-3 mx-auto col-sm-6">
+                <label for="item_name">Detail</label>
+                <textarea type="text" name="team_detail" class="form-control" rows="3">{{$team->team_detail}}</textarea>
+                </div>
             </div>
             <!--/ item_name -->
             <!-- Save ボタン/Back ボタン -->
             <div class="well well-sm">
-                <button type="submit" class="btn btn-primary">Save</button>
-                <a class="btn btn-link pull-right" href="{{ url('/team') }}"> Back</a>
+                <div class="my-3 mx-auto col-sm-6">
+                <button type="submit" class="btn btn-primary w-100">Raise</button>
+                </div>
             </div>
             <!--/ Save ボタン/Back ボタン -->
             <!-- id 値を送信 -->
